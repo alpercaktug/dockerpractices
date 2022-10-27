@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  s_nginx:
+    container_name: c_nginx
+    image: nginx
+    ports:
+      - 8080:80
+      - 8081:80
+
+  s_html:
+    container_name: c_html
+    image: httpd
+    ports:
+      - 9090:80
+      - 9091:80
+    volumes:
+      - /opt/app_docs/nginx/html:/usr/local/apache2/htdocs/
+
+volumes:
+  html:

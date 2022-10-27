@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  s_pdb:
+    container_name: c_pdb
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=1234
+      - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_USER=alpercaktug
+      - POSTGRES_DB=test_db
