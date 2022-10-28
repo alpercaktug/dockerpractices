@@ -34,8 +34,6 @@ docker run -p HOSTPORT:CONTAINERPORT IMAGE
 docker run -P image
 docker run -d IMAGE
 
-
-
 #--> Docker-compose.yml
 docker-compose start
 docker-compose stop
